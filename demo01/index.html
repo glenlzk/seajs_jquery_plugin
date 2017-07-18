@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>
+<script src="js/lib/sea-debug.js"></script>
+<script>
+	
+	/*
+	 * 
+	 *  方法1：
+	 *  	参阅链接：http://web322-szb.iteye.com/blog/1742930
+	 * 
+	 	define(function (require, exports, module) {
+
+		    var jQuery  = require('./jquery');			// 引入 jQuery
+		
+		    require('./jquery-cookie');					// 引入依赖的插件
+			
+		    //put plugin in code here					// 所有的jquery插件代码
+		
+		    return jQuery;								// return出去
+		
+		});
+	 	 
+	 	// 引入插件 和 引入 jQuery 
+	 	define(function(require, exports, module) {
+		    var $ =  require('../plugin');				// return 回来的jQuery
+		    
+		    
+		    // 调用插件 									// 使用插件 
+		    console.log($('.box').testFun('hahahaha'));
+		    
+		}); 
+	 	 
+	*/
+	
+	
+	
+	seajs.config({
+        alias: { 'jQuery': '../js/lib/jquery-2.0.0.min.js' }
+    });
+
+    seajs.use("./js/layout/init.js");
+	
+	
+</script>
